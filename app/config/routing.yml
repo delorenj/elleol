@@ -1,0 +1,5 @@
+elle_olfe:
+    resource: "@ElleOLFEBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

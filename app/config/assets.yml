@@ -1,0 +1,11 @@
+assetic:
+    assets:
+        corejs:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/components/jquery/dist/jquery.js'
+                - '%kernel.root_dir%/Resources/public/components/underscore/underscore.js'
+                - '%kernel.root_dir%/Resources/public/components/sass-bootstrap/dist/js/bootstrap.js'
+        bootstrap:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/components/sass-bootstrap/dist/css/bootstrap.css'
+                - '%kernel.root_dir%/Resources/public/components/sass-bootstrap/dist/css/bootstrap-theme.css'

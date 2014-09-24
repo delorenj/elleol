@@ -32,3 +32,10 @@
 
 # Composer PHAR
 /composer.phar
+
+# Node Modules
+/node_modules/
+/app/Resources/public/components/
+/web/js/
+/web/css/
+

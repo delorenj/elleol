@@ -3,15 +3,15 @@ vagrantfile-local:
     vm:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
-        hostname: ''
+        hostname: local.elleol
         memory: '2048'
         cpus: '1'
         chosen_provider: virtualbox
         network:
             private_network: 192.168.56.102
             forwarded_port:
-                TNIvRTP0RZwW:
-                    host: '7814'
+                yay1n6oeStYr:
+                    host: '7816'
                     guest: '22'
         post_up_message: ''
         provider:
@@ -32,9 +32,9 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            7FOcnDjcehvp:
+            trIcDtNc8hbE:
                 source: ../../
-                target: /var/www
+                target: /var/www/elleol
                 sync_type: default
                 rsync:
                     args:
@@ -67,12 +67,12 @@ server:
 firewall:
     install: '1'
     rules:
-        1kHq32uH3Kbo:
+        fNuqcIQPksb5:
             port: '9000'
             priority: '100'
             proto: tcp
             action: accept
-        ROIUgliP1fUu:
+        6DUmzathCl40:
             port: '1080'
             priority: '100'
             proto: tcp
@@ -92,11 +92,11 @@ apache:
         - rewrite
         - ssl
     vhosts:
-        1HkEjF5fV0ic:
-            servername: elleol.dev
+        5o33igVmcLRe:
+            servername: local.elleol
             serveraliases:
-                - dev.elleol.com
-            docroot: /var/www/app/web
+                - local.elleol.com
+            docroot: /var/www/elleol/web
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -107,16 +107,16 @@ apache:
                 - FollowSymLinks
                 - MultiViews
             engine: php
-            custom_fragment: ''
+            custom_fragment: 'Require all granted'
             ssl_cert: ''
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-        fygJtOJLlScG:
-            servername: dev.elleol.com
+        h34Q1pp490sD:
+            servername: local.elleol
             serveraliases:
-                - dev.elleol.com
-            docroot: /var/www/app/web
+                - local.elleol.com
+            docroot: /var/www/elleol/web
             port: '443'
             setenv:
                 - 'APP_ENV dev'
@@ -127,7 +127,7 @@ apache:
                 - FollowSymLinks
                 - MultiViews
             engine: php
-            custom_fragment: ''
+            custom_fragment: 'Require all granted'
             ssl: '1'
             ssl_cert: ''
             ssl_key: ''
@@ -187,6 +187,7 @@ xdebug:
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp
         xdebug.remote_port: '9000'
+        xdebug.max_nesting_level: '250'
 xhprof:
     install: '0'
 drush:
@@ -195,9 +196,9 @@ drush:
 ruby:
     install: '1'
     versions:
-        nHAvrAizVndY:
-            default: '1'
-            version: 2.1.2
+        YbKhKcCDtVwQ:
+            default: '0'
+            version: 1.9.3
             gems:
                 - compass
             bundler: '1'
@@ -210,14 +211,14 @@ python:
     install: '1'
     packages: {  }
     versions:
-        8XLHldFpUFPi:
+        7vpl24PzWJFd:
             version: ''
 mysql:
     install: '1'
     root_password: root
     adminer: 0
     databases:
-        XoQK62cXP7Ob:
+        GXJmvrcrh2zf:
             grant:
                 - ALL
             name: elleol_develop
