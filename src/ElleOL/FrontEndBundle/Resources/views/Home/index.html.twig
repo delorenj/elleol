@@ -1,0 +1,22 @@
+{% extends 'ElleOLFEBundle::base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts 'bundles/elleolfe/js/home.js' output="js/home.js" %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		{% include 'ElleOLFEBundle::Home/carousel.html.twig' %}
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<h1>Unique invitations, for unique events</h1>
+		</div>
+	</div>
+{% endblock %}

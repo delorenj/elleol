@@ -1,4 +1,6 @@
 assetic:
+    bundles:
+        - ElleOLFEBundle
     assets:
         corejs:
             inputs:

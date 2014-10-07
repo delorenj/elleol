@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@font-face {
+  font-family: 'HaloHandletter';
+  src: url("../fonts/halohandletter-webfont.eot");
+  src: url("../fonts/halohandletter-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/halohandletter-webfont.woff") format("woff"), url("../fonts/halohandletter-webfont.ttf") format("truetype"), url("../fonts/halohandletter-webfont.svg#webfont") format("svg");
+}
+/* line 14, ../../scss/home.scss */
+body {
+  min-height: 6000px;
+}
+
+/* line 23, ../../scss/home.scss */
+#main-container h1 {
+  font-family: "HaloHandletter";
+  color: #531d1d;
+  font-size: 8.3em;
+  line-height: 1.5;
+}
