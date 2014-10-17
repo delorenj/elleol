@@ -1,29 +1,110 @@
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import 'fonts';
 
-@font-face{
-	font-family: 'HaloHandletter';
-	src: url('../fonts/halohandletter-webfont.eot');
-	src: url('../fonts/halohandletter-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('../fonts/halohandletter-webfont.woff') format('woff'),
-	     url('../fonts/halohandletter-webfont.ttf') format('truetype'),
-	     url('../fonts/halohandletter-webfont.svg#webfont') format('svg');
-}
-
+$green: #bdbaa7;
+$pink: #fbc8b7;
+$gray: #f8f9f7;
 $docHeight: 6000px !default;
+
+$font-family-base: "Myriad Pro Regular";
+$link-color: $green;
 
 body {
 	min-height: $docHeight;
+	font-family: "Myriad Pro Regular";
+}
+
+.myriad {
+	font-family: 'Myriad Pro Regular', 'Sans-Serif';
+}
+
+.windsong {
+	font-family: 'Windsong'
+}
+
+.navbar-nav.social-icons li a {
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .navbar-brand {
+	span {
+		&.myriad {
+			font-size: 2em;
+		}
 
+		&.windsong {
+			font-size: 2em;
+			color:$pink;
+			font-weight: 900;
+			position: relative;
+			left: -76px;
+			top: 10px;
+		}
+	}
+}
+
+
+#hero-carousel {
+	width: 78%;
+	margin: auto;
 }
 
 #main-container {
 	h1 {
 		font-family: "HaloHandletter";
 		color: rgb(83, 29, 29);
-		font-size: 8.3em;
-		line-height: 1.5;
+		font-size: 5.3em;
+		line-height: 1.2;
+		margin-top: 0;
 	}
+}
+
+.callout-box {
+	background-color: $gray;
+	border: 1px solid #dcdbd0;
+	text-align: center;
+	&.left {
+		.top {
+			color: $pink;
+			font-family: "HaloHandletter";
+			font-size: 2em;
+			letter-spacing: 0.1em;
+		}
+		.mid {
+			color: #dcdbd0;
+			font-family: inherit;
+			letter-spacing: -0.05em;
+			font-size: 2.5em;
+			font-weight: 900;
+		}
+		.bot {
+			color: #fbc8b7;
+			font-family: inherit;
+			font-size: 2em;
+		}
+	}
+	&.right {
+		.top {
+			color: #282828;
+			font-family: inherit;
+			font-size: 1.2em;
+			letter-spacing: 0.1em;
+		}
+		.mid {
+			color: $pink;
+			font-family: inherit;
+			letter-spacing: -0.05em;
+			font-size: 2.5em;
+			font-weight: 900;
+		}
+		.bot {
+			color: #8ad1c8;
+			font-family: inherit;
+			font-size: 2em;
+			letter-spacing: -0.05em;
+		}
+	}
+}
+.tagline {
+	text-align: center;
 }

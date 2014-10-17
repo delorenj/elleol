@@ -7,7 +7,7 @@
         <meta name="description" content="Unique invitations, for unique events">
         <title>{% block title %}ElleOL Designs{% endblock %}</title>
         {% block stylesheets %}
-            {% stylesheets '@bootstrap' 'bundles/elleolfe/css/*.css' output="css/core.css" filter="cssrewrite" %}
+            {% stylesheets '@bootstrap' 'bundles/elleolfe/css/home.css' output="css/core.css" filter="cssrewrite" %}
                 <link rel="stylesheet" href="{{ asset_url }}">
             {% endstylesheets %}
 
@@ -20,8 +20,6 @@
         <![endif]-->
     </head>
     <body>
-        <div class="dots z1"></div>
-        <div class="dots z2"></div>
         {% block body %}
             {% block navbar %}
                 {% include 'ElleOLFEBundle::navbar.html.twig' %}

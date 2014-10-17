@@ -8,15 +8,25 @@
 {% endblock %}
 
 {% block content %}
+	<div class="row tagline">
+		<h1>Unique invitations, for your special occasion</h1>
+	</div>
+
 	<div class="row">
 		{% include 'ElleOLFEBundle::Home/carousel.html.twig' %}
 	</div>
 
-	<div class="row">
-		<div class="col-md-6 col-xs-12">
+	<div class="row" style="margin-top: 30px;">
+		<div class="col-md-5 callout-box left">
+			<div class="row top">Shop our</div>
+			<div class="row mid">PRINT YOURSELF</div>
+			<div class="row bot">DESIGNS</div>
 		</div>
-		<div class="col-md-6 col-xs-12">
-			<h1>Unique invitations, for unique events</h1>
+		<div class="col-md-offset-2 col-md-5 callout-box right">
+			<div class="row top">CAN'T FIND A DESIGN THAT FITS YOUR PARTY?</div>
+			<div class="row mid">WORK WITH A DESIGNER</div>
+			<div class="row top">AND CREATE SOMETHING CUSTOM</div>
+			<div class="row bot">JUST FOR YOU</div>
 		</div>
 	</div>
 {% endblock %}
